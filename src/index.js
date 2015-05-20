@@ -189,7 +189,7 @@ ProlefeedPrototype.once = function(event, listener) {
  *
  * event may be one of: any, update, swap, add, remove, delete
  *
- * Returns self for chaining.
+ * Returns this for chaining.
  *
  * @param  {String} event
  * @param  {[type]} listener
@@ -206,7 +206,7 @@ ProlefeedPrototype.removeListener = function(event, listener) {
  *
  * event may be one of: any, update, swap, add, remove, delete
  *
- * Returns self for chaining.
+ * Returns this for chaining.
  *
  * @param  {String} event
  * @return {Prolefeed}
