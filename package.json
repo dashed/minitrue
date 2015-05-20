@@ -18,6 +18,19 @@
   "files": [
     "modules"
   ],
+  "keywords": [
+    "cursor",
+    "immutable",
+    "providence",
+    "structure",
+    "data",
+    "datastructure",
+    "events",
+    "observe",
+    "subscribe",
+    "once",
+    "on"
+  ],
   "peerDependencies": {
     "immutable": "3.x"
   },
