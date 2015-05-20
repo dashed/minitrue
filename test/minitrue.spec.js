@@ -5,7 +5,7 @@ const Immutable = require('immutable');
 const { Map, List } = Immutable;
 
 const minitrue = require('../src');
-const Prolefeed = minitrue.Prolefeed;
+const Prolefeed = require('prolefeed');
 const Providence = require('providence');
 
 describe('minitrue', function() {
