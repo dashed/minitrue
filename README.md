@@ -1,7 +1,9 @@
 # minitrue
 
 > War is Peace
+> 
 > Freedom is Slavery
+> 
 > Ignorance is Strength
 > 
 > — **Ministry of Truth**
