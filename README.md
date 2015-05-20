@@ -1,4 +1,4 @@
-# minitrue
+# minitrue [![Build Status](https://travis-ci.org/Dashed/minitrue.svg?branch=master)](https://travis-ci.org/Dashed/minitrue)
 
 > War is Peace
 > 
