@@ -56,7 +56,7 @@ function makeProlefeed(...args) {
 }
 
 /**
- * Prolefeed constructor with the same argument input as the Providence constructor.
+ * Prolefeed constructor with the same argument input as the Prolefeed constructor.
  */
 function Prolefeed() {
 
@@ -94,11 +94,11 @@ Prolefeed.prototype = ProlefeedPrototype;
 ProlefeedPrototype.constructor = Prolefeed;
 
 /**
- * Add observer/listener to listen for changes at this Providence object's keypath.
+ * Add observer/listener to listen for changes at this Prolefeed object's keypath.
  * Be aware that observation isn't scoped to the root data.
  *
  * listener function would be added to a lookup table that is shared among all
- * Providence objects that inherit it.
+ * Prolefeed objects that inherit it.
  *
  * @param  {Function} listener
  * @return {Function}          Returns unobserve function.
@@ -108,7 +108,7 @@ ProlefeedPrototype.observe = function(listener) {
 }
 
 /**
- * Remove observer at this Providence object's keypath.
+ * Remove observer at this Prolefeed object's keypath.
  *
  * @param  {Function} listener
  * @return {Bool}          Returns true if unobserve is successful; false otherwise.
@@ -122,7 +122,7 @@ ProlefeedPrototype.unobserve = function(listener) {
  * event may be one of: any, update, swap, add, remove, delete
  *
  * listener function would be added to a lookup table that is shared among all
- * Providence objects that inherit it.
+ * Prolefeed objects that inherit it.
  *
  * @param  {String} event
  * @param  {Function} listener
