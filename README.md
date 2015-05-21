@@ -8,11 +8,11 @@
 > 
 > — **Ministry of Truth**
 
-`minitrue` (Ministry of Truth) create `Prolefeed` objects that reference a single object reference containing an Immutable Map.
+`minitrue` (Ministry of Truth) create `Probe` cursors that reference a single object reference containing an Immutable Map.
 
-All created `Prolefeed` instances point to the single source of truth.
+All created `Probe` cursors via another `Probe` cursor point to the same single source of truth.
 
-Any two `Prolefeed` objects with the same keypath will point to the same value.
+Any two `Probe` cursors with the same keypath will point to the same value.
 
 ## Usage
 
@@ -24,7 +24,7 @@ $ npm install --save minitrue
 
 ### `minitrue`
 
-Create and return a `Prolefeed` object with `data` as its unboxed root data.
+Create and return a `Probe` object with `data` as its unboxed root data.
 If `data` is not an `Immutable` collection, it'll be converted into one via
 `Immutable.fromJS(data)`.
 
@@ -37,9 +37,9 @@ const truth = minitrue({
 });
 ```
 
-### `Prolefeed`
+### `Probe`
 
-See [Prolefeed API](https://github.com/Dashed/prolefeed).
+See [Probe API](https://github.com/Dashed/probe).
 
 ## FAQ
 
@@ -47,13 +47,8 @@ See [Prolefeed API](https://github.com/Dashed/prolefeed).
 
  `minitrue`, otherwise known as the Ministry of Truth, is an organization in George Orwell's novel, *Nineteen Eighty-Four*, that manages propaganda within a region called Oceania.
 
-Prolefeed is any deliberately superficial literature, movies and music that were produced to keep the "proles" (i.e., proletariat) content and to prevent them from becoming too knowledgeable.
-
-The proles are analogous to React Components.
-
 Sources: 
-- https://en.wikipedia.org/wiki/Ministry_of_Truth 
-- https://en.wikipedia.org/wiki/Prolefeed
+- https://en.wikipedia.org/wiki/Ministry_of_Truth
 
 ## License
 
