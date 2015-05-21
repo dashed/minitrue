@@ -35,3 +35,5 @@ module.exports = function minitrue(data =  {}) {
         map: data
     }));
 }
+
+module.exports.Probe = Probe;

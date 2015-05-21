@@ -10,6 +10,10 @@ const Providence = require('providence');
 
 describe('minitrue', function() {
 
+    it('should expose Probe constructor', function() {
+        expect(minitrue.Probe).to.equal(Probe);
+    });
+
     it('should return object that is instanceof Probe and Providence', function() {
         const cursor = minitrue();
         expect(cursor instanceof Probe).to.be.true;
