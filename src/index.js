@@ -1,10 +1,10 @@
 const Immutable = require('immutable');
 const { Iterable } = Immutable;
 
-const Prolefeed = require('prolefeed');
+const Probe = require('probe');
 
 // this is amalgamated to become the input options of a newly instantiated
-// Prolefeed object
+// Probe object
 const base = Immutable.fromJS({
     root: {
         unbox: function(m) {
@@ -18,12 +18,12 @@ const base = Immutable.fromJS({
 });
 
 /**
- * Creates a Prolefeed object with `data` as its unboxed root data.
+ * Creates a Probe object with `data` as its unboxed root data.
  * If `data` is not an Immutable collection, it'll be converted into one via
  * Immutable.fromJS(data).
  *
  * @param  {Object | Immutable.Iterable } data
- * @return {Prolefeed}
+ * @return {Probe}
  */
 module.exports = function minitrue(data =  {}) {
 
@@ -31,7 +31,7 @@ module.exports = function minitrue(data =  {}) {
         data = Immutable.fromJS(data);
     }
 
-    return new Prolefeed(base.setIn(['root', 'data'], {
+    return new Probe(base.setIn(['root', 'data'], {
         map: data
     }));
 }

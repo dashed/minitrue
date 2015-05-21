@@ -42,6 +42,6 @@
     "providence": "^0.1.2"
   },
   "dependencies": {
-    "prolefeed": "^0.1.0"
+    "probe": "^0.2.0"
   }
 }

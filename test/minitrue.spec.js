@@ -5,14 +5,14 @@ const Immutable = require('immutable');
 const { Map, List } = Immutable;
 
 const minitrue = require('../src');
-const Prolefeed = require('prolefeed');
+const Probe = require('probe');
 const Providence = require('providence');
 
 describe('minitrue', function() {
 
-    it('should return object that is instanceof Prolefeed and Providence', function() {
+    it('should return object that is instanceof Probe and Providence', function() {
         const cursor = minitrue();
-        expect(cursor instanceof Prolefeed).to.be.true;
+        expect(cursor instanceof Probe).to.be.true;
         expect(cursor instanceof Providence).to.be.true;
     });
 
@@ -21,7 +21,7 @@ describe('minitrue', function() {
         const rootData = cursor.options().getIn(['root', 'data']);
         expect(rootData).to.have.property('map');
         expect(Map.isMap(rootData.map)).to.be.true;
-        expect(cursor instanceof Prolefeed).to.be.true;
+        expect(cursor instanceof Probe).to.be.true;
         expect(cursor instanceof Providence).to.be.true;
     });
 
@@ -47,7 +47,7 @@ describe('minitrue', function() {
             },
             x: [1, 'a', true, null, void 0, 3.14, { foo: 'bar'}]
         });
-        expect(cursor instanceof Prolefeed).to.be.true;
+        expect(cursor instanceof Probe).to.be.true;
         expect(cursor instanceof Providence).to.be.true;
     });
 
@@ -59,7 +59,7 @@ describe('minitrue', function() {
         expect(rootData).to.have.property('map');
         expect(List.isList(rootData.map)).to.be.true;
         expect(rootData.map.toJS()).to.eql([1, 'a', true, null, void 0, 3.14, { foo: 'bar'}]);
-        expect(cursor instanceof Prolefeed).to.be.true;
+        expect(cursor instanceof Probe).to.be.true;
         expect(cursor instanceof Providence).to.be.true;
     });
 
