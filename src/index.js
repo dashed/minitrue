@@ -28,14 +28,14 @@ const base = Immutable.fromJS({
  * @param  {Object | Immutable.Iterable } data
  * @return {Probe}
  */
-module.exports = function minitrue(data =  {}) {
+module.exports = function minitrue(data = {}, prevMap = DummyMap) {
 
     if(!Iterable.isIterable(data)) {
         data = Immutable.fromJS(data);
     }
 
     return new Probe(base.setIn(DATA_PATH, {
-        previousMap: DummyMap,
+        previousMap: prevMap,
         map: data
     }));
 }
