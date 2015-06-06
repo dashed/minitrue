@@ -2,7 +2,6 @@ const Immutable = require('immutable');
 const { Iterable } = Immutable;
 const Probe = require('probe');
 
-const DummyMap = Immutable.Map();
 const DATA_PATH = ['root', 'data'];
 
 // this is amalgamated to become the input options of a newly instantiated
@@ -13,7 +12,6 @@ const base = Immutable.fromJS({
             return m.map;
         },
         box: function(newRoot, m) {
-            m.previousMap = m.map;
             m.map = newRoot;
             return m;
         }
@@ -28,14 +26,13 @@ const base = Immutable.fromJS({
  * @param  {Object | Immutable.Iterable } data
  * @return {Probe}
  */
-module.exports = function minitrue(data = {}, prevMap = DummyMap) {
+module.exports = function minitrue(data = {}) {
 
     if(!Iterable.isIterable(data)) {
         data = Immutable.fromJS(data);
     }
 
     return new Probe(base.setIn(DATA_PATH, {
-        previousMap: prevMap,
         map: data
     }));
 }

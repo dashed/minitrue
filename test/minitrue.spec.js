@@ -76,22 +76,6 @@ describe('minitrue', function() {
         expect(rootData.map).to.equal(imm);
     });
 
-    it('should set previous map', function() {
-        const prevMap = Immutable.Map();
-        const cursor = minitrue({}, prevMap);
-        const rootData = cursor.options().getIn(['root', 'data']);
-        expect(rootData).to.have.property('previousMap');
-        expect(Map.isMap(rootData.previousMap)).to.be.true;
-        expect(rootData.previousMap).to.equal(prevMap);
-    });
-
-    it('should set default previous map', function() {
-        const cursor = minitrue({});
-        const rootData = cursor.options().getIn(['root', 'data']);
-        expect(rootData).to.have.property('previousMap');
-        expect(Map.isMap(rootData.previousMap)).to.be.true;
-    });
-
     it('should access updated value from within observe/onUpdate', function() {
         let calls = 0;
         const cursor = minitrue({});
