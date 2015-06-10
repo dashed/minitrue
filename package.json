@@ -1,6 +1,6 @@
 {
   "name": "minitrue",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Providence cursor factory",
   "main": "modules/index.js",
   "scripts": {
